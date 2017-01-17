@@ -16,17 +16,16 @@ window.onload = function () {
     }
 
     var display=document.getElementById('screen');
-    	display.innerHTML=''; //ensures that the page does not have undefined on screen when loading
+    	display.innerText=''; //ensures that the page does not have undefined on screen when loading
     var clear=document.getElementById('clear');
     clear.addEventListener('click',function(){
     	display.innerHTML='';
-    	document.location.reload(true); //this clears the entire page and starts over
-    	
+    	document.location.reload(true); //this clears the entire page and starts over	
     });
     var decimal=document.getElementById('point');
-    decimal.addEventListener('click', function(){
-    	console.log("I'm a decimal");
-    });
+    decimal.addEventListener('click', saveNumber);
+    	displayAnswer(this.innerHTML);
+    	
      var equals = document.getElementById('equals');
      equals.addEventListener('click', function(){
      	performMath(ops);
@@ -50,8 +49,7 @@ var saveNumber = function(){
 		num2 += this.innerText;
 		display.innerText= num1 + ' ' + ops + ' ' + num2;
 
-	}
-	
+	}	
 
 }
 var saveOps = function(){
@@ -63,24 +61,21 @@ var saveOps = function(){
 		console.log(ops);
 	}
 	
-
 }
  var displayAnswer = function(answer){
  	 var display = document.getElementById('screen');
  	 display.innerHTML = answer;
  }
-
 var performMath = function(ops){	
 	
 	if( ops == "+"){
 		add();
 	}else if( ops == "-"){
-		 subtract();
-	
+		subtract();
 	}else if ( ops == "/"){
-			divide();
+		divide();
 	}else if ( ops == "X"){
-			multiply();
+		multiply();
 	}
 
 	// if( op[0] == "+"){
