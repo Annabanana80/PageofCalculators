@@ -16,9 +16,16 @@ window.onload = function () {
     }
 
     var display=document.getElementById('screen');
+    	display.innerHTML=''; //ensures that the page does not have undefined on screen when loading
     var clear=document.getElementById('clear');
     clear.addEventListener('click',function(){
     	display.innerHTML='';
+    	document.location.reload(true); //this clears the entire page and starts over
+    	
+    });
+    var decimal=document.getElementById('point');
+    decimal.addEventListener('click', function(){
+    	console.log("I'm a decimal");
     });
      var equals = document.getElementById('equals');
      equals.addEventListener('click', function(){

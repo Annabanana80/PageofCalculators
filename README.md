@@ -1,7 +1,7 @@
 # PageofCalculators
 Welcome to my Page of Calculators!
 
-On this page, you will find a simple calculator. It works and take double digits. I am in the process of creating a "clear all" button so that one won't have to refresh the page every time one wants to do simple calculations. 
+On this page, you will find a simple calculator. It works and take double digits. I am in the process of making the decimal work.  
 
 Other possible calculators that might be on this page are:
 
